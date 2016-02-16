@@ -1,0 +1,50 @@
+# get '/session-viewer' do
+#   # for troubleshooting
+#   session.inspect
+# end
+#
+# get "/sessions/login" do
+#   if logged_in?
+#     @user = User.find(session[:id])
+#     session[:user] = @user
+#     redirect "/users/#{@user.id}"
+#   else
+#     @errors = session[:errors] if session[:errors] != nil
+#     erb :"/sessions/login"
+#   end
+# end
+# get "/sessions/logout" do
+#
+# session[:id] = nil
+# session[:user] = nil
+# session[:errors] = nil
+#     redirect "/"
+#     erb :"/"
+# end
+#
+# # get "/sessions/register" do
+# #   if logged_in?
+# #     @user = User.find(session[:id])
+# #     redirect "/users/#{@user.id}"
+# #   else
+# #     redirect "/users/#{@user.id}"
+# #   end
+# # end
+#
+# post '/sessions/authenticate' do
+#   @user = User.authenticate(params[:email], params[:password])
+#     if @user != nil
+#    session[:id] = @user.id
+#     session[:user] = @user
+#     redirect "/users/#{@user.id}"
+#   else
+#     session[:errors] = {:messages=> ['invalid email/password combo']}
+#     redirect '/sessions/login'
+#   endaaaaaaaaaaaaaaa
+              #kkkkkkkkkkkkkkkkkkkkkkkkk
+# delete '/sessions' do
+#   session.delete(:id)
+#   redirect '/'
+    # endaaas;d1aauuuaaaaaaaaaaaaaaa
+#
+# ***aa=

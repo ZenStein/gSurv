@@ -1,0 +1,12 @@
+
+
+<%= @user.name %>
+<%= @created_surveys.inspect %>
+<%= @created_surveys.methods %>
+<%= @created_surveys.is_a? Object %>
+<% @created_surveys.each do |x| %>
+<%= x.name %><br>
+<%= @params %><br>
+<% end %>
+<br><br>
+<a href="/users/<%= @user.id %>">Profile</a>

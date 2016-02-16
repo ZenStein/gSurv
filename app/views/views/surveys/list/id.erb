@@ -1,0 +1,10 @@
+
+
+Table name: <% @survey.name%><br>
+<% @questions.each do |q| %>
+<h1><%= q.question %><br></h1>
+<% q.answers.each do |a| %><br>
+<%= a.answer %><br>
+<% end %>
+<% end %>
+<a href="/surveys/list">back to list</a>

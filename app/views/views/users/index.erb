@@ -1,0 +1,9 @@
+  welcome, <%= @user.name  %><br>
+  welcome, <%= @params  %><br>
+signed in as <%= @user.username  %><br>
+<a href="/sessions/logout">Logout</a><br>
+
+
+  would you like to <a href="/surveys/new">create a survey</a><br>
+  would you like to <a href="/surveys/<%=@user.id%>">view your surveys</a><br>
+  would you like to <a href="/surveys/list">view all surveys</a><br>

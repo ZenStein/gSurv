@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'fileutils'
+
+database_config = YAML.load_file(Dir.pwd + '/config/database.yml')['development'];
+database_name = database_config['database']
+
+exec('psql', "-d#{database_name}")

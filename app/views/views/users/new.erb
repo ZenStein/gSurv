@@ -1,0 +1,50 @@
+'Create your Survey Gorilla Account!'
+<br>
+<br><br><br>
+  <% if @errors.is_a? Object && @errors != nil %>
+  <%  @errors.messages.each do |reason| %>
+  <%    reason.each do |message| %>
+              <%=  message %><br>
+  <% end %>
+  <% end %>
+  <% end %>
+      <form class="form-signin" method="post" action="/users/new">
+        <h2 class="form-signin-heading">Register</h2>
+
+        <label for="name" class="sr-only">Name</label>
+        <input type="text" name="name" class="form-control" placeholder="name" required autofocus required>
+
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" name="username" class="form-control" placeholder="username" required>
+
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" name="email" class="form-control" placeholder="Email address" required>
+
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+<!-- Username
+name
+email
+password
+sign up button
+  <a href="/users/show">Sign Up!</a> (this should send you to the users new profile page.) -->
+<a href="/">Home</a>
+
+
+<form role="form">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

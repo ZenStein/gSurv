@@ -1,0 +1,26 @@
+
+<%= @params.inspect %>
+
+
+<form name="myForm" ng-submit="new_survey()"ng-controller="ExampleController" method="post" action="/surveys/new">
+
+              <label><h1>Survey name: </h1><br>
+                  <input type="text" ng-model="survey.name" name="name">
+            </label><br/>
+      <div ng-repeat="question in questions track by question.index">
+            <label>Question {{ $index }}: <label ng-click="remove_question(question.index)">Remove</label>
+                  <input type="text" name="questions[]"ng-model="questions[$index].question">
+            </label><br/>
+        <div ng-repeat="answer in question.answers track by $index">
+          <input type="text" name="answers[{{ question.index }}][]" placeholder="answer" ng-model="question.answers[$index]">
+        </div>
+        <input type="button" value="add answer" ng-click="add_answer($index)">
+      </div>
+  <input type="button" value="add question" ng-click="add_question()">
+  <input type="submit" id="submit" value="create_survey">
+ </form>
+
+<br><br>
+<a href="/users/index">Profile page</a>
+
+

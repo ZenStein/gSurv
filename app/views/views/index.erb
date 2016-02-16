@@ -1,0 +1,29 @@
+'Welcome to Survey Gorilla!'
+<!-- this page needs to be able to login
+needs a register button that sends you to the users/new page -->
+
+
+<a href="users/new">signup</a>
+<% if logged_in? %>
+<a href="sessions/logout">logout</a>
+<a href="users/<%= @user.id  %>">profile</a>
+<% else %>
+<a href="sessions/login">login</a>
+<% end %>
+
+<form class="form-inline" role="form">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+
